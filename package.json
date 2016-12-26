@@ -1,11 +1,13 @@
 {
   "name": "react-timer-safely",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Timer functions for executing code in the future that are safely cleaned up when the react component unmounts.",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
-    "build": "babel index.js --out-dir dist"
+    "build": "babel index.js --out-dir dist",
+    "webpack": "webpack --config webpack.config.js",
+    "example": "node_modules/.bin/webpack-dev-server --progress --hot --compress --watch --inline --content-base webroot"
   },
   "keywords": [
     "timer",
@@ -15,16 +17,22 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.20.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
+    "postcss-loader": "^1.2.1",
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
-    "sinon": "^1.17.6"
+    "sinon": "^1.17.6",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }

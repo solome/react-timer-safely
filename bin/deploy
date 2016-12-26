@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+npm run build
+npm run webpack
+
+cd webroot
+
+git init
+git add --all
+git commit -m "deploy"
+git push --force --quiet "git@github.com:solome/react-timer-safely.git" master:gh-pages
