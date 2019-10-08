@@ -21,7 +21,7 @@ class TimerSafelyComponent extends Component {
     this.requestAnimationFrame(fn)
   }
 
-  rende() {
+  render () {
     return (
       <main>
         <button onClick={this.handleAsyncTimer}>async timer</button>
